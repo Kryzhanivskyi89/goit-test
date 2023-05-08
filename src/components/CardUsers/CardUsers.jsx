@@ -1,12 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
-import avatarPlug from "../../images/avatar.png";
-import { useUpdateFollowersMutation } from "../../redux/followersApi";
-import Button from "../Button/Button";
-import Loader from "../Loader/Loader";
 
-import style from "./CardUsers.module.css";
+import { useUpdateFollowersMutation } from "../../redux/followersApi";
 import { selectFollowing } from "../../redux/selectors";
 import { followingUser, unfollowingUser } from "../../redux/slice";
+import Button from "../Button/Button";
+import Loader from "../Loader/Loader";
+import avatarPlug from "../../images/avatar.png";
+import style from "./CardUsers.module.css";
+
 
 const CardUser = ({ user }) => {
     const { id, tweets, followers, avatar } = user;
